@@ -16,6 +16,7 @@
     <a href="concepts.html">Key Concepts</a>
     <a href="references.html">References</a>
     <a href="about.html">About</a>
+    <a href="quiz.html">Quiz</a>
 </nav>
    <h1>How HTTP Works</h1>
 <p>HTTP lets a browser request information from a web server.</p>
@@ -27,5 +28,7 @@
     <li>The server sends back a response.</li>
     <li>The browser uses the response to display the content.</li>
 </ol>
+<h2>One Page, Multiple Request</h2>
+<p>When you open my homepage, the browser request <strong>index.html</strong> from Github. The HTML then tells the browser where to find <strong>style.css</strong> and <strong>http-diagram.png</strong>. If the browser doesn't already have copies of those files, then it'll send a separate request for them. That's why opening one page can involve more than one HTTP request.</p>
 </body>
 </html>

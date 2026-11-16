@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="how-http-works.html">How HTTP Works</a>
+    <a href="http-evolution.html">HTTP Evolution</a>
+    <a href="concepts.html">Key Concepts</a>
+    <a href="references.html">References</a>
+    <a href="about.html">About</a>
+</nav>
+    <!-- introducing the website's research topic -->
+<h1>HTTP Quiz</h1> 
+   <!-- quiz timer -->
+<p>Time remaining: <strong id="quiz-timer">10:00</strong></p>
+<!-- The quiz form holds all ten questions. -->
+<form id="http-quiz">
+    <p>
+        <label for="q1">1. What does HTTP stand for?</label><br>
+        <input type="text" id="q1" name="q1">
+    </p>
+    <p>
+    <label for="q2">2. What HTTP status code means "Not Found"?</label><br>
+    <input type="text" id="q2" name="q2">
+</p>
+<fieldset>
+    <legend>3. Which HTTP method is used to retrieve a resource?</legend>
+
+    <label><input type="radio" name="q3" value="get"> GET</label><br>
+    <label><input type="radio" name="q3" value="post"> POST</label><br>
+    <label><input type="radio" name="q3" value="delete"> DELETE</label>
+</fieldset>
+<fieldset>
+    <legend>4. What does the HTTP status code 200 mean?</legend>
+
+    <label><input type="radio" name="q4" value="not-found"> Not Found</label><br>
+    <label><input type="radio" name="q4" value="server-error"> Internal Server-Error</label><br>
+    <label><input type="radio" name="q4" value="ok"> OK</label>
+</fieldset>
+<fieldset>
+    <legend>5. Which HTTP version uses QUIC?</legend>
+
+    <label><input type="radio" name="q5" value="http-1-1"> HTTP/1.1</label><br>
+    <label><input type="radio" name="q5" value="http-2"> HTTP/2</label><br>
+    <label><input type="radio" name="q5" value="http-3"> HTTP/3</label>
+</fieldset>
+<!-- Question 6 uses checkboxes so users can select multiple answers. -->
+<fieldset>
+    <legend>6. Which of these are HTTP request methods? Select all that apply.</legend>
+
+    <label><input type="checkbox" name="q6" value="get"> GET</label><br>
+    <label><input type="checkbox" name="q6" value="post"> POST</label><br>
+    <label><input type="checkbox" name="q6" value="404"> 404</label>
+</fieldset>
+
+<fieldset>
+    <legend>7. What sends an HTTP request when you open a webpage?</legend>
+
+    <label><input type="radio" name="q7" value="browser"> The browser</label><br>
+    <label><input type="radio" name="q7" value="server"> The web server</label><br>
+    <label><input type="radio" name="q7" value="stylesheet"> The stylesheet</label>
+</fieldset>
+
+<fieldset>
+    <legend>8. What is the server's reply to an HTTP request called?</legend>
+
+    <label><input type="radio" name="q8" value="method"> A method</label><br>
+    <label><input type="radio" name="q8" value="response"> A response</label><br>
+    <label><input type="radio" name="q8" value="request"> A request</label>
+</fieldset>
+
+<fieldset>
+    <legend>9. Which HTTP version supports multiple streams over one TCP connection?</legend>
+
+    <label><input type="radio" name="q9" value="http-1-1"> HTTP/1.1</label><br>
+    <label><input type="radio" name="q9" value="http-2"> HTTP/2</label><br>
+    <label><input type="radio" name="q9" value="http-3"> HTTP/3</label>
+</fieldset>
+
+<fieldset>
+    <legend>10. Where does an HTTP response indicate the type of content it contains?</legend>
+
+    <label><input type="radio" name="q10" value="status-code"> The status code</label><br>
+    <label><input type="radio" name="q10" value="request-method"> The request method</label><br>
+    <label><input type="radio" name="q10" value="content-type"> The Content-Type header</label>
+</fieldset>
+<button type="submit">Submit Quiz</button>
+<button type="reset">Reset Quiz</button>
+</form>
+<section id="quiz-results" aria-label="Quiz results" aria-live="polite"></section>
+<script src="quiz.js" defer></script>
+</body>
+</html>
